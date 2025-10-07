@@ -1,9 +1,15 @@
-<h1>Delete Blog</h1>
-<p>Are you sure you want to delete the blog titled "{{ blog.title }}"?</p>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Delete Blog - My Blog{% endblock %}
+
+{% block content %}
+<h2>Confirm Delete</h2>
+<p>Are you sure you want to delete "<strong>{{ blog.title }}</strong>"?</p>
 
 <form method="post">
-  {% csrf_token %}
-  <input type="submit" value="Confirm Delete">
+    {% csrf_token %}
+    <button type="submit" style="background-color: #d9534f; color: white; padding: 10px 15px;">Yes, Delete</button>
+    <a href="{% url 'blog_detail' pk=blog.pk %}">Cancel</a>
 </form>
-
-<a href="{% url 'blog_list' %}">Cancel</a>
+{% endblock %}
