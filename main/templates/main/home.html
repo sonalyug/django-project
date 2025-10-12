@@ -1,0 +1,76 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <h1>Welcome to My Study Adda</h1>
+        <p>A collection of my Django projects and web development journey</p>
+        <a href="{% url 'about' %}" class="btn btn-light btn-lg mt-4">Learn More About Me</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">My Skills & Expertise</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Building complete web applications from database to user interface using Django and modern frontend technologies.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Design</h3>
+                    <p>Creating efficient database schemas and writing optimized SQL queries for data storage and retrieval.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>Transforming raw data into meaningful insights using Python and data visualization tools.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Preview -->
+<section class="container my-5">
+    <h2 class="text-center mb-5">Featured Projects</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="{% static 'images/calculator.jpg' %}" class="card-img-top" alt="Calculator App">
+                <div class="card-body">
+                    <h5 class="card-title">Django Calculator</h5>
+                    <p class="card-text">A simple calculator application built with Django forms and template inheritance.</p>
+                    <a href="{% url 'calculator' %}" class="btn btn-primary">Try It Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <img src="{% static 'images/courses.jpg' %}" class="card-img-top" alt="Courses">
+                <div class="card-body">
+                    <h5 class="card-title">Learning Platform</h5>
+                    <p class="card-text">A course management system showcasing my Django skills in building educational applications.</p>
+                    <a href="{% url 'courses' %}" class="btn btn-primary">View Courses</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

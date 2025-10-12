@@ -1,0 +1,59 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Courses{% endblock %}
+{% block content %}
+<div class="container my-5 animate-fade-in">
+    <h2 class="text-center mb-5">My Learning Journey</h2>
+    
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card mb-4">
+                <img src="{% static 'images/courses.jpg' %}" class="card-img-top" alt="Learning">
+                <div class="card-body">
+                    <p class="text-center">Here are the key areas I'm focusing on to become a well-rounded full-stack developer:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title text-primary">Django Full Stack</h3>
+                    <p><strong>Duration:</strong> 3 months</p>
+                    <p><strong>Progress:</strong> <div class="progress mb-3">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    </div></p>
+                    <ul>
+                        <li>Project structure and organization</li>
+                        <li>Models, Views, and Templates</li>
+                        <li>Forms and validation</li>
+                        <li>User authentication</li>
+                        <li>REST API development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title text-primary">React.js Development</h3>
+                    <p><strong>Duration:</strong> 2 months</p>
+                    <p><strong>Progress:</strong> <div class="progress mb-3">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                    </div></p>
+                    <ul>
+                        <li>Component-based architecture</li>
+                        <li>State management with hooks</li>
+                        <li>React Router for navigation</li>
+                        <li>API integration</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+{% endblock %}  

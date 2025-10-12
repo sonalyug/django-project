@@ -1,0 +1,120 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Contact Me{% endblock %}
+{% block content %}
+<div class="container my-5 animate-fade-in">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="{% static 'images/contact.jpg' %}" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="Contact">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body p-5">
+                            <h2 class="card-title mb-4 text-primary">Get In Touch</h2>
+                            
+                            {% if submitted %}
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong>Thank you!</strong> Your message has been sent successfully.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                            {% endif %}
+                            
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                    <label for="id_name" class="form-label">Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        {{ form.name }}
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="id_email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        {{ form.email }}
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="id_message" class="form-label">Message</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-comment"></i>
+                                        </span>
+                                        {{ form.message }}
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100 py-3">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </form>
+                            
+                            <div class="mt-4 pt-3 border-top">
+                                <h5 class="text-primary">Connect With Me</h5>
+                                <div class="d-flex justify-content-center gap-3 mt-3">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Information Cards -->
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card text-center border-0 bg-light">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                            </div>
+                            <h5>Location</h5>
+                            <p class="text-muted mb-0">India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-0 bg-light">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-envelope fa-2x text-primary"></i>
+                            </div>
+                            <h5>Email</h5>
+                            <p class="text-muted mb-0">contact@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-0 bg-light">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-clock fa-2x text-primary"></i>
+                            </div>
+                            <h5>Response Time</h5>
+                            <p class="text-muted mb-0">Within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

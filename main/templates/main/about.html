@@ -1,0 +1,44 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+{% block content %}
+<div class="container my-5 animate-fade-in">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <img src="{% static 'images/about.webp' %}" class="card-img-top" alt="About Me">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">About Me</h2>
+                    <div class="about-content">
+                        <p>Hello! I'm a passionate full-stack developer with a strong foundation in Django, React, and modern web technologies. I'm currently building my portfolio through hands-on projects that combine my technical skills with creative problem-solving.</p>
+                        
+                        <p>My journey in web development began with a fascination for how websites work and has evolved into a deep passion for creating elegant, user-friendly applications. I believe in writing clean, maintainable code and continuously learning new technologies to stay at the forefront of web development.</p>
+                        
+                        <p>When I'm not coding, you can find me exploring new frameworks, contributing to open-source projects, or sharing my knowledge with fellow developers. I'm particularly interested in data visualization, responsive design, and creating seamless user experiences.</p>
+                        
+                        <h3>My Skills</h3>
+                        <ul>
+                            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, React, Bootstrap</li>
+                            <li><strong>Backend:</strong> Python, Django, REST APIs, SQL</li>
+                            <li><strong>Databases:</strong> MySQL, PostgreSQL, SQLite</li>
+                            <li><strong>Tools:</strong> Git, VS Code, Docker, RESTful APIs</li>
+                        </ul>
+                        
+                        <h3>My Approach</h3>
+                        <p>I follow a systematic approach to development:</p>
+                        <ol>
+                            <li><strong>Plan:</strong> Understand requirements and create a clear roadmap</li>
+                            <li><strong>Design:</strong> Create wireframes and user flows</li>
+                            <li><strong>Develop:</strong> Write clean, well-documented code</li>
+                            <li><strong>Test:</strong> Ensure functionality and responsiveness</li>
+                            <li><strong>Deploy:</strong> Launch and monitor performance</li>
+                        </ol>
+                        
+                        <p>I'm always looking for new challenges and opportunities to grow as a developer. Feel free to reach out if you'd like to collaborate on a project or just chat about web development!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
